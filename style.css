@@ -223,6 +223,40 @@ html, body {
 }
 
 /* ── Bio page ── */
+.bio-layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.bio-layout .bio-photo {
+  flex-shrink: 0;
+  width: 40%;
+  max-width: 380px;
+  margin: 0;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.bio-text p {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bio-text p:first-child {
+  margin-top: 0;
+}
+
+.bio-text .cta-buttons {
+  justify-content: flex-start;
+}
+
 .bio-photo {
   width: 100%;
   max-width: 420px;
@@ -469,4 +503,10 @@ html, body {
   .page-body { padding: 36px 24px 48px; }
   .site-footer { padding: 24px; }
   .signup-box { padding: 32px 24px; }
+
+  /* Bio: stack photo above text on small screens */
+  .bio-layout { flex-direction: column; gap: 28px; text-align: center; }
+  .bio-layout .bio-photo { width: 100%; max-width: 320px; margin: 0 auto; }
+  .bio-text p { margin-left: auto; margin-right: auto; }
+  .bio-text .cta-buttons { justify-content: center; }
 }
